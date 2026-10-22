@@ -1,0 +1,12 @@
+{
+  "name": "agentic-engineering-workflow",
+  "version": "1.0.0",
+  "description": "Skills for engineering with coding agents: a spec-first SDLC with an automated PR reviewer, critical reviews, security threat modeling, design grilling, domain modeling, teaching, and parallel worktrees.",
+  "author": {
+    "name": "Jignesh Ammineni",
+    "url": "https://github.com/JigneshAmmineni"
+  },
+  "repository": "https://github.com/JigneshAmmineni/agentic-engineering-workflow",
+  "license": "MIT",
+  "keywords": ["claude-code", "skills", "sdlc", "code-review", "agentic-engineering"]
+}

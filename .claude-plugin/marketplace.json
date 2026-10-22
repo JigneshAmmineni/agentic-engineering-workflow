@@ -1,0 +1,16 @@
+{
+  "name": "agentic-engineering-workflow",
+  "owner": {
+    "name": "Jignesh Ammineni",
+    "url": "https://github.com/JigneshAmmineni"
+  },
+  "description": "Jignesh Ammineni's Claude Code skills for engineering with coding agents.",
+  "plugins": [
+    {
+      "name": "agentic-engineering-workflow",
+      "source": "./",
+      "description": "Skills for engineering with coding agents: a spec-first SDLC with an automated PR reviewer, critical reviews, security threat modeling, design grilling, domain modeling, teaching, and parallel worktrees.",
+      "category": "engineering"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "skill_name": "critical-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/critical-review I want to build a multi-tenant SaaS app where each customer gets their own isolated Postgres database (database-per-tenant model). My reasoning: better data isolation, easier to comply with data residency laws, and simpler backup/restore per customer. The backend is Node.js/Express. I plan to spin up a new RDS instance per tenant on signup. Auth is handled by a JWT issued by a central auth service, with the tenant ID embedded in the token. The app itself is stateless and connects to whichever DB the token says. Should be easy to scale.",
+      "expected_output": "Three distinct perspective reports (Antagonist, Researcher, Advocate) followed by an aggregated synthesis covering strengths, weaknesses, what to keep, what to change, and concrete recommendations.",
+      "files": [],
+      "expectations": [
+        "Output contains three separate reports with headers for Antagonist, Researcher, and Advocate",
+        "Output contains an aggregated/synthesis section at the end",
+        "The aggregated section includes strengths, weaknesses, and recommendations",
+        "The Antagonist report raises specific technical concerns (e.g., cost, cold start, connection limits, RDS overhead)",
+        "The Researcher report names at least one real existing solution or approach (e.g., row-level security, schema-per-tenant, Neon, PlanetScale, Citus)",
+        "The Advocate report identifies genuine strengths of the approach (e.g., isolation, compliance)",
+        "The recommendations section contains concrete actionable items"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "/critical-review here's my plan for a football content generation agent: there's a Curator agent that pulls data from sports APIs and news feeds, a Writer agent that takes the curated data and generates articles/tweets/analysis, and a Critic agent that reviews the Writer's output for accuracy and quality before publishing. The three agents talk to each other sequentially — Curator feeds Writer, Writer feeds Critic, Critic either approves or sends back to Writer. Everything is orchestrated by a parent agent. I'm building this on top of Google ADK. The goal is fully automated sports content that feels human-written. Monetization is via a newsletter subscription.",
+      "expected_output": "Three distinct perspective reports (Antagonist, Researcher, Advocate) followed by an aggregated synthesis covering strengths, weaknesses, what to keep, what to change, and concrete recommendations.",
+      "files": [],
+      "expectations": [
+        "Output contains three separate reports with headers for Antagonist, Researcher, and Advocate",
+        "Output contains an aggregated/synthesis section at the end",
+        "The aggregated section includes strengths, weaknesses, and recommendations",
+        "The Antagonist report raises concerns about accuracy, hallucination, legal/copyright issues, or market differentiation",
+        "The Researcher report references existing AI content generation tools, sports journalism automation, or comparable architectures",
+        "The Advocate report highlights genuine strengths like the pipeline separation of concerns or the quality-gate via Critic",
+        "The recommendations section contains at least 3 concrete actionable items"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "/critical-review I'm designing a local-first collaborative note-taking app. The core idea: all data lives on the user's device (SQLite), and sync between devices is handled via CRDTs (conflict-free replicated data types). There's no central server — peers sync directly over WebRTC when on the same network, and fall back to an optional self-hosted relay server for cross-network sync. The app is an Electron desktop app + React Native mobile. Monetization: one-time purchase, no subscription. My pitch is privacy, offline-first, and no vendor lock-in.",
+      "expected_output": "Three distinct perspective reports (Antagonist, Researcher, Advocate) followed by an aggregated synthesis covering strengths, weaknesses, what to keep, what to change, and concrete recommendations.",
+      "files": [],
+      "expectations": [
+        "Output contains three separate reports with headers for Antagonist, Researcher, and Advocate",
+        "Output contains an aggregated/synthesis section at the end",
+        "The aggregated section includes strengths, weaknesses, and recommendations",
+        "The Antagonist report raises concerns about CRDT complexity, WebRTC NAT traversal, monetization sustainability, or user onboarding friction",
+        "The Researcher report names at least one real comparable product or technology (e.g., Obsidian, Notion, Logseq, Yjs, Automerge, Liveblocks)",
+        "The Advocate report highlights the genuine appeal of local-first, privacy, or offline-first approaches",
+        "The recommendations section contains concrete actionable items"
+      ]
+    }
+  ]
+}
